@@ -1,80 +1,52 @@
-#  LSTM Time Series Forecasting
+# LSTM-Based Time Series Forecasting
 
-This project demonstrates how to build and train a Long Short-Term Memory (LSTM) neural network for time series forecasting using Python and TensorFlow/Keras.
+This notebook demonstrates how to use an LSTM (Long Short-Term Memory) model to forecast time series data using TensorFlow/Keras.
 
----
+## What This Project Does
 
-##  Overview
+- Reads monthly air travel data from `AirPassengers.csv`
+- Prepares the data for supervised learning
+- Builds and trains an LSTM model
+- Makes predictions and compares them to real values
+- Visualizes the model's predictions and training loss
+- Calculates R² score for both training and testing phases
 
-Time series forecasting is a powerful technique used to predict future values based on previously observed data points. This project implements a Long Short-Term Memory (LSTM) model using TensorFlow/Keras to perform time series forecasting on the Air Passengers dataset. The objective is to predict the number of monthly international airline passengers over time using historical trends.
+## Dataset Used
 
+The dataset `AirPassengers.csv` contains monthly totals of international airline passengers from 1949 to 1960.  
+Make sure to upload this file to your Colab runtime or place it in the same folder if running locally.  
+It is also included in this GitHub repository.
 
-The script will:
+## Key Libraries
 
-- Load and visualize the original passenger data.
+- NumPy and Pandas  
+- Matplotlib  
+- Scikit-learn  
+- TensorFlow / Keras
 
-- Normalize data and create 12-month sequences.
+## Visual Output
 
-- Split into training (80%) and testing sets.
+- Smaller-sized plots with red color scheme  
+- Training vs prediction graphs  
+- Loss over epochs  
+- R² metrics printed in the output
 
-- Build and train an LSTM model (50 units + dropout).
+## How to Run
 
-- Compute RMSE and R² for train and test sets.
+1. Upload `AirPassengers.csv` in your Google Colab session or clone the GitHub repo  
+2. Open the notebook (`.ipynb`) file in Colab or Jupyter  
+3. Install any missing libraries with pip  
+4. Run all cells step-by-step
 
-- Forecast the next 12 months of passenger counts.
+## Output
 
-- Plot actual vs. predicted values and future forecast.
+- Visual and numeric comparison of predicted and actual values  
+- Loss curve showing model training over time  
+- Evaluation metrics for performance
 
-##  Requirements
+## Note
 
-- Python 3  
-- Required Python packages:
+This project is created for academic demonstration purposes.  
+You can replace the dataset with any other time series data to adapt it to your needs.
 
-    - TensorFlow / Keras  
-    - NumPy  
-    - Matplotlib / Seaborn  
-    - Pandas
-    - scikit-learn
-
----
-
-##  Files
-
-- `LSTM_Time_series_Forecasting.ipynb`: Jupyter Notebook containing the full code and explanations.
-
----
-
-##  How to Run
-
-1. Clone the repository or download the notebook.
-
-2. Make sure you have the required packages installed. You can use the following:
-
-    ```bash
-    pip install numpy pandas matplotlib seaborn tensorflow
-    ```
-
-3. Open the notebook using Jupyter or any compatible environment:
-
-    ```bash
-    jupyter notebook LSTM_Time_series_Forecasting.ipynb
-    ```
-
-4. Run each cell in order to train and test the model.
-
----
-
-##  Results
-
-- Time Series Plot of Actual Data
-- Predicted vs Actual on Test Set
-- Forecast for Next 12 Months
-
-
-##  Notes
-
-- Ensure your dataset is properly formatted (time series with consistent intervals).  
-- You may need to tweak hyperparameters or sequence length based on your specific use case or dataset.
-
----
 
