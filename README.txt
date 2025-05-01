@@ -52,6 +52,4 @@ Libraries Used
 
 ---
 
-**Disclaimer:**  
-This notebook is intended for educational use. You can easily swap in your own time series dataset by following the same pipeline.
 
